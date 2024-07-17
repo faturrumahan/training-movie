@@ -8,8 +8,8 @@ function WatchList() {
   const { watchLists } = useSelector((state: RootState) => state.watchList);
   const dispatch = useDispatch();
 
-  const onRemoveHandler = (index: number) => {
-    dispatch(removewatchList(index));
+  const onRemoveHandler = (id: number) => {
+    dispatch(removewatchList(id));
   };
 
   return (
@@ -23,7 +23,7 @@ function WatchList() {
           <div className="flex items-center gap-2">
             <p>{watchList.title}</p>
           </div>
-          <button onClick={() => onRemoveHandler(index)}>🗑️</button>
+          <button onClick={() => onRemoveHandler(watchList.id)}>🗑️</button>
         </div>
       ))}
     </>

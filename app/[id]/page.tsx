@@ -58,7 +58,7 @@ async function MovieDetail({ params }: Props) {
           className="rounded object-cover h-full w-full"
         />
       </div>
-      <div className="flex flex-col gap-2 mt-5">
+      <div className="flex flex-col gap-2 mt-5 w-full">
         <div className="flex justify-between">
           <h1 className="font-bold text-3xl">{data.title}</h1>
           <SaveButton id={id} title={data.title} />

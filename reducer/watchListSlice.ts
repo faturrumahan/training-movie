@@ -18,10 +18,17 @@ export const watchListSlice = createSlice({
       state.watchLists = [...state.watchLists, action.payload];
     },
     removewatchList: (state, action) => {
-      state.watchLists = [
-        ...state.watchLists.slice(0, action.payload),
-        ...state.watchLists.slice(action.payload + 1),
-      ];
+      // state.watchLists = [
+      //   ...state.watchLists.slice(0, action.payload),
+      //   ...state.watchLists.slice(action.payload + 1),
+      // ];
+      state.watchLists.map((list, index) => {
+        if (list.id === action.payload) {
+          state.watchLists = state.watchLists.filter(
+            (list) => list.id !== action.payload
+          );
+        }
+      });
     },
   },
 });
