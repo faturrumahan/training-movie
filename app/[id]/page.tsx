@@ -35,8 +35,7 @@ async function getMovie(id: string) {
     params: { language: "en-US" },
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMDBiOGM2MzhkODQxY2Y5YzU0M2U4OWMwMTFkMjliMiIsIm5iZiI6MTcyMTEyODA4Mi44MzcxOTUsInN1YiI6IjY1OTRlZmNiOTkyZmU2MmIyNzFlNmUwOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.BJFn8FS2UYWcowGQtA8Xv1Dhc2T6ZYtIBrDfwiswArY",
+      Authorization: `Bearer ${process.env.NEXT_PUBLIC_TOKEN}`,
     },
   });
 
